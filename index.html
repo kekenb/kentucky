@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                              <!-- Add your image here -->
+                           <div class="sidenav-image" style="text-align: center; margin: 20px 0;">
+                            <img src="https://images.hdqwalls.com/wallpapers/anime-girl-colorful-hairs-4k-yu.jpg" alt="Profile Picture" style="width: 80%; border-radius: 50%;">
+                        </div>
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Home
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Projects
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#collapseLayouts">Midterm</a>
+                            </a>
+                            <a class="nav-link" href="portfolio.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Portfolio
+                                
+                            </a>
+                            <a class="nav-link"data-bs-toggle="collapse" data-bs-target="#collapseLayouts">Final</a>
+                            <a class="nav-link" href="dashboard.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Dashboard
+                            </a> 
+                            <a class="nav-link" href="Images.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Images
+                            </a>
+                                <a class="nav-link" href="charts.html">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                    Charts
+                                </a>
+                                <a class="nav-link" href="tables.html">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                    Tables
+                                </a>
+                                <a class="nav-link" href="register.html">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                    Contact Form
+                                </a>
+                                
+                            </nav>
+                        </div>
+                    </nav>
+                </div>
+              
+                    <style>
+                        body {
+                            background-color: #102a42; /* Adjust the background color to match the screenshot */
+                            color: #d4e157; /* Adjust the text color to match the screenshot */
+                            font-family: 'Times New Roman', Times, serif;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            margin: 0;
+                        }
+                        .container {
+                            text-align: left;
+                            max-width: 600px;
+                        }
+                        .profile-image {
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            display: block;
+                            margin: 0 auto 1em; /* Center the image and add bottom margin */
+                        }
+                        h1 {
+                            font-size: 3.0em;
+                            margin-bottom: 0.5em;
+                            text-align: center; /* Center align the heading */
+                        }
+                        .highlight {
+                            background-color: rgba(255, 255, 255, 0.2);
+                            display: inline-block;
+                            padding: 0.2em;
+                        }
+                        .intro-text {
+                            font-size: 1.2em;
+                            margin-bottom: 1.5em;
+                        }
+                        .buttons {
+                            display: flex;
+                            gap: 1em;
+                        }
+                        .button {
+                            background-color: #d4e157; /* Button background color */
+                            color: #102a42; /* Button text color */
+                            padding: 0.8em 1.2em;
+                            text-decoration: none;
+                            border-radius: 5px;
+                            font-weight: bold;
+                        }
+                        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 1em; /* Center the image and add bottom margin */
+        }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/419917939_235839072908160_6705082753733010888_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHfMdyYhGuSGaeRTzQQWpW2y7AQBRrrlhPLsBAFGuuWE_3dBys03_nvhJLhQniweeA6v9uh3QcoSpBv7rJX1AQR&_nc_ohc=ZuE3ynKVdt8Q7kNvgGGzgoY&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGoc1UItqqtv25r8fqIkBR3vZC0Ts4lCpRWd-htv5sphw&oe=667EB623" alt="Profile Image" class="profile-image">
+                        <h1>NERISSA KANE M. SAJOL</h1>
+                        <p class="intro-text">As a 19-year-old first-year IT student from the beautiful Dinagat Islands, I am passionate about both my studies in information technology and my commitment to environmental conservation and community engagement.</p>
+                        <div class="buttons">
+                            <a href="#" class="button">Explore My Work</a>
+                            <a href="tel:955552343" class="button">Call: (95) 555 2343</a>
+                        </div>
+                    </div>
+                </body>
+                </html>
+                
+                       
+                                   
+                            
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
